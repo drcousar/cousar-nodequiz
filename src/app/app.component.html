@@ -1,0 +1,41 @@
+<!--
+      /*
+============================================
+; Title: NodeQuiz
+; Author: Don Cousar
+; Date: 29 September 2019
+; Description: MEAN Stack Node Quiz Project
+;===========================================
+*/
+-->
+<app-login>
+  <mat-toolbar class="menu" role="header" color="primary">
+    <mat-toolbar-row>
+      <button mat-button class="toolbar__icon-button mat-button">
+        <mat-icon>computer</mat-icon>
+        <span style="margin-left: 5px !important" [routerLink]="['/']"
+          >NodeQuiz</span>
+          
+      </button>
+      <button mat-button class="toolbar__icon-button mat-button">
+          <span style="margin-left: 15px !important" [routerLink]="['/csummary']"
+            >Cumulative Summary</span>
+        </button>
+      <div fxFlex></div>
+      <button
+        mat-icon-button
+        class="toolbar__icon-button"
+        [matMenuTriggerFor]="menu"
+      >
+      
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</app-login>
