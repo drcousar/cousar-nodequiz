@@ -892,6 +892,11 @@ export class QuizComponent implements OnInit {
     this.quizResults = formData;
     this.quizResults['employeeId'] = this.employeeId;
     this.quizResults['quiz'] = this.quiz;
+
+    this.selectedAnswers = [];
+    this.correctAnswers = [];
+    this.questionsAnsweredWrong = [];
+
     
     const config = { headers: new HttpHeaders().set('Content-Type', 'application/json') };
 

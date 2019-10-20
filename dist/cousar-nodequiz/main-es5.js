@@ -316,7 +316,7 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--\n    /*\n============================================\n; Title: NodeQuiz\n; Author: Don Cousar\n; Date: 29 September 2019\n; Description: MEAN Stack Node Quiz Project\n;===========================================\n*/\n-->\n<div class=\"container\">\n\n    <mat-card class=\"form\">\n      <mat-card-content>\n          <h2>Please sign in</h2>\n        <small *ngIf=\"errorMessage\">{{ errorMessage }}</small>\n        <form\n          [formGroup]=\"form\"\n          #loginForm=\"ngForm\"\n          (ngSubmit)=\"onSubmit(form.value); form.reset()\"\n        >\n          <small\n            *ngIf=\"\n              form.controls['employeeId'].hasError('required') &&\n              form.controls['employeeId'].touched\n            \">Employee Id is required\n          </small>\n          <small\n            *ngIf=\"\n              form.controls['employeeId'].hasError('pattern') &&\n              form.controls['employeeId'].touched\n            \">Invalid Employee Id\n          </small>\n          <mat-form-field class=\"inputStyle\">\n            <input\n              type=\"text\"\n              matInput\n              [formControl]=\"form.controls['employeeId']\"\n              placeholder=\"Enter Employee Id\"\n            />\n          </mat-form-field>\n  \n          <mat-card-actions>\n            <button\n              mat-raised-button\n              color=\"primary\"\n              [disabled]=\"!form.valid\"\n              color=\"accent\"\n              type=\"submit\"\n            >\n              Log in\n            </button>\n          </mat-card-actions>\n        </form>\n        <br /><br />\n      </mat-card-content>\n    </mat-card>\n  </div>\n  "
+module.exports = "<!--\r\n    /*\r\n============================================\r\n; Title: NodeQuiz\r\n; Author: Don Cousar\r\n; Date: 29 September 2019\r\n; Description: MEAN Stack Node Quiz Project\r\n;===========================================\r\n*/\r\n-->\r\n<div class=\"container\">\r\n\r\n    <mat-card class=\"form\">\r\n      <mat-card-content>\r\n          <h2>Please sign in</h2>\r\n        <small *ngIf=\"errorMessage\">{{ errorMessage }}</small>\r\n        <form\r\n          [formGroup]=\"form\"\r\n          #loginForm=\"ngForm\"\r\n          (ngSubmit)=\"onSubmit(form.value); form.reset()\"\r\n        >\r\n          <small\r\n            *ngIf=\"\r\n              form.controls['employeeId'].hasError('required') &&\r\n              form.controls['employeeId'].touched\r\n            \">Employee Id is required\r\n          </small>\r\n          <small\r\n            *ngIf=\"\r\n              form.controls['employeeId'].hasError('pattern') &&\r\n              form.controls['employeeId'].touched\r\n            \">Invalid Employee Id\r\n          </small>\r\n          <mat-form-field class=\"inputStyle\">\r\n            <input\r\n              type=\"text\"\r\n              matInput\r\n              [formControl]=\"form.controls['employeeId']\"\r\n              placeholder=\"Enter Employee Id\"\r\n            />\r\n          </mat-form-field>\r\n  \r\n          <mat-card-actions>\r\n            <button\r\n              mat-raised-button\r\n              color=\"primary\"\r\n              [disabled]=\"!form.valid\"\r\n              color=\"accent\"\r\n              type=\"submit\"\r\n            >\r\n              Log in\r\n            </button>\r\n          </mat-card-actions>\r\n        </form>\r\n        <br /><br />\r\n      </mat-card-content>\r\n    </mat-card>\r\n  </div>\r\n  "
 
 /***/ }),
 
@@ -338,7 +338,7 @@ module.exports = "<!--\n    /*\n============================================\n; 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--\n============================================\n; Title: NodeQuiz\n; Author: Don Cousar\n; Date: 03 October 2019\n; Description: MEAN Stack Node Quiz Project\n;===========================================\n-->\n<h1 mat-dialog-title>Node Quiz</h1>\n<div mat-dialog-content>\n  <h2>Quiz Results</h2>\n  <h3>Quiz Score: </h3>\n  <h3>Missed Question: </h3>\n  <p>You answered: </p>\n  <p>Correct answer: </p>\n  <!--\n  <mat-form-field>\n    <input matInput [(ngModel)]=\"\">\n  </mat-form-field>\n  -->\n</div>\n<div mat-dialog-actions>\n  <button mat-button [mat-dialog-close]=\"\" cdkFocusInitial>Ok</button>\n\n</div>\n"
+module.exports = "<!--\n============================================\n; Title: NodeQuiz\n; Author: Don Cousar\n; Date: 03 October 2019\n; Description: MEAN Stack Node Quiz Project\n;===========================================\n-->\n<h1 mat-dialog-title>Node Quiz</h1>\n<div mat-dialog-content>\n    <h3>Quiz Score: {{quizScore}}</h3>\n  \n  <div *ngIf=\"quizScore != 100\">\n    <h2>The following questions were answer incorrectly</h2> \n    <div *ngFor=\"let item of myQuestions.question\">\n        <p><b>Question {{item.question}}</b></p>\n        <p class=\"wrongAnswer\"> You Answered: {{item.selectedAnswer}}</p>\n        <p class=\"rightAnswer\">The Correct Answer: {{item.correctAnswers}}</p>\n        <hr />\n    </div>\n  </div>\n<div mat-dialog-actions>\n  <button mat-button [mat-dialog-close]=\"\" cdkFocusInitial>Ok</button>\n</div>\n"
 
 /***/ }),
 
@@ -349,7 +349,7 @@ module.exports = "<!--\n============================================\n; Title: N
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--\n============================================\n; Title: NodeQuiz\n; Author: Don Cousar\n; Date: 03 October 2019\n; Description: MEAN Stack Node Quiz Project\n;===========================================\n-->\n<div fxLayout=\"column\" style=\"margin-top: 5%; margin-left: 10%; width: 60%;\">\n    <mat-card class=\"mat-elevation-z8\">\n        <mat-card-title>{{quizChoice}} Quiz</mat-card-title>\n        <mat-card-content *ngIf=\"myQuiz.questions\">\n            <form #f=\"ngForm\" (ngSubmit)=\"onSubmit(f.value); f.reset();\">\n                <div fxLayout=\"column\">\n                    <div fxFlex *ngFor=\"let question of myQuiz.questions\">\n                        <mat-card class=\"mat-elevation-z8\">\n                            <div fxLayout=\"column\">\n                                <!-- questions-->\n                                <mat-list>\n                                    <div fxLayout=\"row\" fxLayoutGap=\"10px\">\n                                        <p>Question: </p>\n                                        <p>{{question.text}}</p>\n                                    </div>\n                                </mat-list>\n                                <br />\n                                <!-- answers -->\n                                <div fxLayout=\"row\" fxLayoutGap=\"10px\" ngModelGroup=\"answerBank\">\n                                    <label>Answers:</label>\n                                    <div fxLayout=\"column\" fxLayoutGap=\"10px\" >\n                                        <div *ngFor=\"let answer of question.answers\" style=\"flex-direction: column;\">\n                                            <input [(ngModel)]=\"question[question.id]\" [checked]=\"question[question.id]\" value=\"{{answer.id}};{{answer.isCorrect}}\"\n                                            name=\"question{{question.id}}\" type=\"radio\" required/>\n                                            {{answer.text}}\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </mat-card>                \n                    </div>\n                </div>           \n                <button mat-menu-item>\n                    <span>Submit</span>\n                </button>\n        </form>\n        </mat-card-content>\n        <mat-card-actions>\n            <small><a routerLink=\"/presentation/{{quiz}}\">Re-Take Training</a></small>\n        </mat-card-actions>\n    </mat-card>\n</div>\n"
+module.exports = "<!--\n============================================\n; Title: NodeQuiz\n; Author: Don Cousar\n; Date: 03 October 2019\n; Description: MEAN Stack Node Quiz Project\n;===========================================\n-->\n<div fxLayout=\"column\" style=\"margin-top: 5%; margin-left: 10%; width: 60%;\">\n    <mat-card class=\"mat-elevation-z8\">\n        <mat-card-title>{{quizChoice}} Quiz</mat-card-title>\n        <mat-card-content *ngIf=\"myQuiz.questions\">\n            <form #f=\"ngForm\" (ngSubmit)=\"onSubmit(f.value); f.reset();\">\n                <div fxLayout=\"column\">\n                    <div fxFlex *ngFor=\"let question of myQuiz.questions\">\n                        <mat-card class=\"mat-elevation-z8\">\n                            <div fxLayout=\"column\">\n                                <!-- questions-->\n                                <mat-list>\n                                    <div fxLayout=\"row\" fxLayoutGap=\"10px\">\n                                        <p>Question: </p>\n                                        <p>{{question.text}}</p>\n                                    </div>\n                                </mat-list>\n                                <br />\n                                <!-- answers -->\n                                <div fxLayout=\"row\" fxLayoutGap=\"10px\" ngModelGroup=\"answerBank\">\n                                    <label>Answers:</label>\n                                    <div fxLayout=\"column\" fxLayoutGap=\"10px\" >\n                                        <div *ngFor=\"let answer of question.answers\" style=\"flex-direction: column;\">\n                                            <input [(ngModel)]=\"question[question.id]\" [checked]=\"question[question.id]\" value=\"{{answer.id}};{{answer.isCorrect}};{{answer.text}}\"\n                                            name=\"question{{question.id}}\" type=\"radio\" required/>\n                                            {{answer.text}}\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </mat-card>                \n                    </div>\n                </div>           \n                <button mat-menu-item>\n                    <span>Submit</span>\n                </button>\n        </form>\n        </mat-card-content>\n        <mat-card-actions>\n            <small><a routerLink=\"/presentation/{{quiz}}\">Re-Take Training</a></small>\n        </mat-card-actions>\n    </mat-card>\n</div>\n"
 
 /***/ }),
 
@@ -853,7 +853,7 @@ var LoginComponent = /** @class */ (function () {
         });
     };
     //Call web service
-    LoginComponent.prototype.onSubmit = function (form) {
+    LoginComponent.prototype.onSubmit = function () {
         var _this = this;
         var employeeId = this.form.controls["employeeId"].value;
         this.http.get("/api/employees/" + employeeId).subscribe(function (res) {
@@ -987,7 +987,7 @@ var PresentationComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvcXVpei1zdW1tYXJ5LWRpYWxvZy9xdWl6LXN1bW1hcnktZGlhbG9nLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = "/*\r\n============================================\r\n; Title: NodeQuiz\r\n; Author: Don Cousar\r\n; Date: 20 October 2019\r\n; Description: MEAN Stack Node Quiz Project\r\n;===========================================\r\n*/\r\n.wrongAnswer{\r\n    border-style: groove;\r\n    border-color: red;\r\n}\r\n.rightAnswer{\r\n    border-style: groove;\r\n    border-color: green;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9xdWl6LXN1bW1hcnktZGlhbG9nL3F1aXotc3VtbWFyeS1kaWFsb2cuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7OztDQU9DO0FBQ0Q7SUFDSSxvQkFBb0I7SUFDcEIsaUJBQWlCO0FBQ3JCO0FBRUE7SUFDSSxvQkFBb0I7SUFDcEIsbUJBQW1CO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9xdWl6LXN1bW1hcnktZGlhbG9nL3F1aXotc3VtbWFyeS1kaWFsb2cuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXHJcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XHJcbjsgVGl0bGU6IE5vZGVRdWl6XHJcbjsgQXV0aG9yOiBEb24gQ291c2FyXHJcbjsgRGF0ZTogMjAgT2N0b2JlciAyMDE5XHJcbjsgRGVzY3JpcHRpb246IE1FQU4gU3RhY2sgTm9kZSBRdWl6IFByb2plY3RcclxuOz09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cclxuKi9cclxuLndyb25nQW5zd2Vye1xyXG4gICAgYm9yZGVyLXN0eWxlOiBncm9vdmU7XHJcbiAgICBib3JkZXItY29sb3I6IHJlZDtcclxufVxyXG5cclxuLnJpZ2h0QW5zd2Vye1xyXG4gICAgYm9yZGVyLXN0eWxlOiBncm9vdmU7XHJcbiAgICBib3JkZXItY29sb3I6IGdyZWVuO1xyXG59Il19 */"
 
 /***/ }),
 
@@ -1019,15 +1019,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var QuizSummaryDialogComponent = /** @class */ (function () {
-    function QuizSummaryDialogComponent(dialogRef, data, cookieService) {
+    function QuizSummaryDialogComponent(dialogRef, data, questionData, cookieService) {
         this.dialogRef = dialogRef;
         this.cookieService = cookieService;
         this.quizSummary = data.quizSummary;
         this.quizScore = data.quizScore;
-        console.log('Dialog Component Data: ' + data);
-        //this.correctAnswers = this.quizSummary.correctAnswers;
-        //this.selectedAnswers = this.quizSummary.selectedAnswers;
+        this.questions = data.questions;
+        this.correctAnswers = data.correctAnswers;
+        this.selectedAnswers = data.selectedAnswers;
+        this.myQuestions = data.myQuestions;
+        //this.correctAnswers = data.correctAnswers;
+        //this.selectedAnswers = data.selectedAnswers;
+        console.log('foo');
+        console.table(this.quizSummary);
+        console.log('Dialog Component Data: ');
+        console.table(data);
         this.employeeId = this.cookieService.get('employeeId');
+        console.log('Dialog Questions');
+        console.table(this.questions);
+        console.log('Dialog My Questions');
+        console.table(this.myQuestions);
     }
     QuizSummaryDialogComponent.prototype.onNoClick = function () {
         this.dialogRef.close();
@@ -1038,18 +1049,22 @@ var QuizSummaryDialogComponent = /** @class */ (function () {
     QuizSummaryDialogComponent.ctorParameters = function () { return [
         { type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] },
         { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] },
+        { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] },
         { type: ngx_cookie_service__WEBPACK_IMPORTED_MODULE_3__["CookieService"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
     ], QuizSummaryDialogComponent.prototype, "quizResults", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+    ], QuizSummaryDialogComponent.prototype, "questionsAnsweredWrong", void 0);
     QuizSummaryDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-quiz-summary-dialog',
             template: __webpack_require__(/*! raw-loader!./quiz-summary-dialog.component.html */ "./node_modules/raw-loader/index.js!./src/app/components/quiz-summary-dialog/quiz-summary-dialog.component.html"),
             styles: [__webpack_require__(/*! ./quiz-summary-dialog.component.css */ "./src/app/components/quiz-summary-dialog/quiz-summary-dialog.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]))
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])), tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](2, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]))
     ], QuizSummaryDialogComponent);
     return QuizSummaryDialogComponent;
 }());
@@ -1114,6 +1129,14 @@ var QuizComponent = /** @class */ (function () {
         this.title = 'Take Quiz';
         this.questions = [];
         this.question = [];
+        this.quizBank = [];
+        this.wrongBank = [];
+        this.myQuestions = {
+            question: []
+        };
+        this.selectedAnswers = [];
+        this.correctAnswers = [];
+        this.questionsAnsweredWrong = [];
         //BEGIN Mock JSON Data;  In real production this data would import into MongoDB 
         this.oauthQuiz = [
             {
@@ -1271,7 +1294,7 @@ var QuizComponent = /** @class */ (function () {
                             {
                                 id: 223,
                                 text: 'd. The consumer obtains an access token',
-                                isCorrect: true
+                                isCorrect: false
                             }
                         ]
                     },
@@ -1935,6 +1958,7 @@ var QuizComponent = /** @class */ (function () {
             this.myQuiz = this.continuousIntegrationQuiz.filter(function (q) { return q.quizId === 102; })[0];
             ;
         }
+        this.quizBank = this.myQuiz;
     }
     QuizComponent.prototype.extractData = function (res) {
         var body = res.json();
@@ -1946,10 +1970,16 @@ var QuizComponent = /** @class */ (function () {
     };
     QuizComponent.prototype.onSubmit = function (formData) {
         var _this = this;
+        console.log('MyQuiz');
+        console.table(this.quizBank);
+        console.log(this.quizBank.questions[0]);
         console.log('Begin Form Submission');
         this.quizResults = formData;
         this.quizResults['employeeId'] = this.employeeId;
         this.quizResults['quiz'] = this.quiz;
+        this.selectedAnswers = [];
+        this.correctAnswers = [];
+        this.questionsAnsweredWrong = [];
         var config = { headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]().set('Content-Type', 'application/json') };
         //console.log(this.quizResults['employeeId']); //show employee ID number, debug only
         console.table(this.quizResults); //show quiz results
@@ -1960,10 +1990,13 @@ var QuizComponent = /** @class */ (function () {
         */
         var scoredResults;
         var x = 0; //instantiate score at 0
+        var y = 0;
+        var tempQuestion;
         //iterate 10 times (1 per question) and count points where user answered correctly
         for (var i = 1; i < 11; i++) {
             scoredResults = this.quizResults['answerBank']['question' + i];
             var isQuestionCorrect = scoredResults.split(";")[1]; //parse results to determine if answered correctly
+            var answerText = scoredResults.split(";")[2];
             //console.log(scoredResults + ':' + isQuestionCorrect); //view answers Sanity check, comment out after debug
             //Test results and grant 10 points where user answered correctly
             if (isQuestionCorrect === "true") {
@@ -1971,16 +2004,54 @@ var QuizComponent = /** @class */ (function () {
             }
             else {
                 x = (x + 0);
-            }
-        }
-        //console.log('Score: ' + x);  //write user's score to console, debug Only
-        this.quizResults['score'] = x; //write score to object
-        var data = { 'quizId': this.quizResults['quiz'], 'employeeId': this.quizResults['employeeId'], 'score': this.quizResults['score'] };
+                //Begin logic
+                y = (i - 1);
+                //Write Questions that were incorrectly answered to an array
+                tempQuestion = this.quizBank.questions[y].text;
+                this.questionsAnsweredWrong.push(tempQuestion);
+                //console.log('tq text: ' + tempQuestion); //Debug Only
+                //console.log('Answer Text: ' + answerText); //Debug Only
+                this.selectedAnswers.push(answerText);
+                //Loop through correct answers for one that was answered incorrectly and display
+                for (var p = 0; p < 4; p++) {
+                    if (this.quizBank.questions[y].answers[p].isCorrect === true) {
+                        console.log(this.quizBank.questions[y].answers[p].text);
+                        //this.correctAnswers.push(this.quizBank.questions[y].answers[p].text);
+                        this.correctAnswers = this.quizBank.questions[y].answers[p].text;
+                    } //end if condition
+                } //end for loop
+                this.myQuestions.question.push({
+                    "question": tempQuestion,
+                    "selectedAnswer": answerText,
+                    "correctAnswers": this.correctAnswers
+                });
+            } //end if condition
+        } //end for loop
+        console.log('incorrect questions array');
+        console.table(this.questionsAnsweredWrong);
+        console.log('correct answers array');
+        console.table(this.correctAnswers);
+        console.log('answered answers array');
+        console.table(this.selectedAnswers);
+        console.log('MyQuestions Array');
+        console.table(this.myQuestions);
+        for (var prop in this.quizResults)
+            //console.log('Score: ' + x);  //write user's score to console, debug Only
+            this.quizResults['score'] = x; //write score to object
+        this.quizResults['questions'] = this.questionsAnsweredWrong;
+        this.quizResults['correctAnswers'] = this.correctAnswers;
+        this.quizResults['selectedAnswers'] = this.selectedAnswers;
+        var questionData = { 'questions': this.questionsAnsweredWrong, 'correctAnswers': this.correctAnswers, 'selectedAnswers': this.selectedAnswers };
+        var data = { 'quizId': this.quizResults['quiz'], 'employeeId': this.quizResults['employeeId'], 'score': this.quizResults['score'], 'myQuestions': this.myQuestions };
         var summaryData = { 'quizId': this.quizResults['quiz'], 'employeeId': this.quizResults['employeeId'], 'date': moment__WEBPACK_IMPORTED_MODULE_7__().format(), 'score': this.quizResults['score'] };
+        console.log('My Quiz Results');
         console.table(this.quizResults); //verify quizResults updated in console
         //this.displayResults = JSON.stringify(this.quizResults);
         //onsole.log('Results' + this.displayResults);
-        console.log(data);
+        console.log('My data');
+        console.table(data);
+        console.log('My questions');
+        console.table(questionData);
         return this.http.post('/api/results', data, config).subscribe(function (res) {
             console.log("POST: " + res);
         }, function (err) {
@@ -2006,7 +2077,11 @@ var QuizComponent = /** @class */ (function () {
         console.log('Dialog Score: ' + this.quizResults['score']);
         var dialogRef = this.dialog.open(_quiz_summary_dialog_quiz_summary_dialog_component__WEBPACK_IMPORTED_MODULE_6__["QuizSummaryDialogComponent"], {
             data: {
-                quizScore: this.quizResults['score']
+                quizScore: this.quizResults['score'],
+                questions: this.quizResults['questions'],
+                correctAnswers: this.quizResults['correctAnswers'],
+                selectedAnswers: this.quizResults['selectedAnswers'],
+                myQuestions: this.myQuestions
             },
             disableClose: true,
             width: '800px'
