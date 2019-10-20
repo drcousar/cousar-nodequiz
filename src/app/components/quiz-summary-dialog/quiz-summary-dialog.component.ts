@@ -27,7 +27,7 @@ export class QuizSummaryDialogComponent implements OnInit {
   employeeId: string;
   quizScore: number;
   foo: string;
-  myQuestions: [];
+  myQuestions: any;
 
   constructor(
     private dialogRef: MatDialogRef<QuizSummaryDialogComponent>,
