@@ -853,7 +853,7 @@ var LoginComponent = /** @class */ (function () {
         });
     };
     //Call web service
-    LoginComponent.prototype.onSubmit = function () {
+    LoginComponent.prototype.onSubmit = function (form) {
         var _this = this;
         var employeeId = this.form.controls["employeeId"].value;
         this.http.get("/api/employees/" + employeeId).subscribe(function (res) {

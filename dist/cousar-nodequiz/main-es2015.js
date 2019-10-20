@@ -886,7 +886,7 @@ let LoginComponent = class LoginComponent {
         });
     }
     //Call web service
-    onSubmit() {
+    onSubmit(form) {
         const employeeId = this.form.controls["employeeId"].value;
         this.http.get("/api/employees/" + employeeId).subscribe(res => {
             if (res) {

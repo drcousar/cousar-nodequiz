@@ -68,7 +68,7 @@ export class LoginComponent implements OnInit {
   }
 
   //Call web service
-  onSubmit(form) {
+  onSubmit() {
     const employeeId = this.form.controls["employeeId"].value;
 
     this.http.get("/api/employees/" + employeeId).subscribe(res => {
