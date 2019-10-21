@@ -33,17 +33,14 @@ export class QuizSummaryDialogComponent implements OnInit {
     private dialogRef: MatDialogRef<QuizSummaryDialogComponent>,
     @Inject(MAT_DIALOG_DATA) data, @Inject(MAT_DIALOG_DATA) questionData, private cookieService: CookieService
   ) { 
-    this.quizSummary = data.quizSummary;
+ 
     this.quizScore = data.quizScore;
-    this.questions = data.questions;
-    this.correctAnswers = data.correctAnswers;
-    this.selectedAnswers = data.selectedAnswers;
     this.myQuestions = data.myQuestions;
     
     console.log('Dialog Component Data: ');
     console.table(data);
 
-    this.employeeId = this.cookieService.get('employeeId');
+    //this.employeeId = this.cookieService.get('employeeId');
     console.log('Dialog Questions');
     console.table(this.questions);
 

@@ -460,7 +460,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".left {\n    width: 25%;\n    background-color: white;\n    color: black;\n}\n\n.right {\n    width: 75%;\n    background-color: white;\n    color: black;\n}\n\n.menu {\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    z-index: 2;\n    color: white;\n}\n\n.wrapper {\n    padding: 70px 70px 0;\n    display: block;\n}\n\n.example-form {\n    min-width: 150px;\n    max-width: 500px;\n    width: 100%;\n  }\n\n.example-full-width {\n    width: 100%;\n  }\n\n/* Form Styles */\n\n.frm-login { width: 50%; margin: 0 auto; }\n\n.frm-login-panel { border: 1px solid black; }\n\n.frm-login-header { background-color: red; }\n\n.frm-login-toolbar { background-color: red; color: white }\n\n.frm-login-body { display: flex; flex-direction: column; margin-top: 15px; }\n\n.btn-login { background-color: gray; color: white; }\n\n.frm-login-actions { text-align: right }\n\n/* Global */\n\n.wrapper { width: 100%; margin-top: 10%; background-color: white}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxVQUFVO0lBQ1YsdUJBQXVCO0lBQ3ZCLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxVQUFVO0lBQ1YsdUJBQXVCO0lBQ3ZCLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxlQUFlO0lBQ2YsTUFBTTtJQUNOLE9BQU87SUFDUCxRQUFRO0lBQ1IsVUFBVTtJQUNWLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxvQkFBb0I7SUFDcEIsY0FBYztBQUNsQjs7QUFFQTtJQUNJLGdCQUFnQjtJQUNoQixnQkFBZ0I7SUFDaEIsV0FBVztFQUNiOztBQUVBO0lBQ0UsV0FBVztFQUNiOztBQUVBLGdCQUFnQjs7QUFDbEIsYUFBYSxVQUFVLEVBQUUsY0FBYyxFQUFFOztBQUN6QyxtQkFBbUIsdUJBQXVCLEVBQUU7O0FBQzVDLG9CQUFvQixxQkFBcUIsRUFBRTs7QUFDM0MscUJBQXFCLHFCQUFxQixFQUFFLGFBQWE7O0FBQ3pELGtCQUFrQixhQUFhLEVBQUUsc0JBQXNCLEVBQUUsZ0JBQWdCLEVBQUU7O0FBQzNFLGFBQWEsc0JBQXNCLEVBQUUsWUFBWSxFQUFFOztBQUNuRCxxQkFBcUIsa0JBQWtCOztBQUN2QyxXQUFXOztBQUNYLFdBQVcsV0FBVyxFQUFFLGVBQWUsRUFBRSx1QkFBdUIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sZWZ0IHtcbiAgICB3aWR0aDogMjUlO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIGNvbG9yOiBibGFjaztcbn1cblxuLnJpZ2h0IHtcbiAgICB3aWR0aDogNzUlO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIGNvbG9yOiBibGFjaztcbn1cblxuLm1lbnUge1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDA7XG4gICAgbGVmdDogMDtcbiAgICByaWdodDogMDtcbiAgICB6LWluZGV4OiAyO1xuICAgIGNvbG9yOiB3aGl0ZTtcbn1cblxuLndyYXBwZXIge1xuICAgIHBhZGRpbmc6IDcwcHggNzBweCAwO1xuICAgIGRpc3BsYXk6IGJsb2NrO1xufVxuXG4uZXhhbXBsZS1mb3JtIHtcbiAgICBtaW4td2lkdGg6IDE1MHB4O1xuICAgIG1heC13aWR0aDogNTAwcHg7XG4gICAgd2lkdGg6IDEwMCU7XG4gIH1cbiAgXG4gIC5leGFtcGxlLWZ1bGwtd2lkdGgge1xuICAgIHdpZHRoOiAxMDAlO1xuICB9XG5cbiAgLyogRm9ybSBTdHlsZXMgKi9cbi5mcm0tbG9naW4geyB3aWR0aDogNTAlOyBtYXJnaW46IDAgYXV0bzsgfVxuLmZybS1sb2dpbi1wYW5lbCB7IGJvcmRlcjogMXB4IHNvbGlkIGJsYWNrOyB9XG4uZnJtLWxvZ2luLWhlYWRlciB7IGJhY2tncm91bmQtY29sb3I6IHJlZDsgfVxuLmZybS1sb2dpbi10b29sYmFyIHsgYmFja2dyb3VuZC1jb2xvcjogcmVkOyBjb2xvcjogd2hpdGUgfVxuLmZybS1sb2dpbi1ib2R5IHsgZGlzcGxheTogZmxleDsgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsgbWFyZ2luLXRvcDogMTVweDsgfVxuLmJ0bi1sb2dpbiB7IGJhY2tncm91bmQtY29sb3I6IGdyYXk7IGNvbG9yOiB3aGl0ZTsgfVxuLmZybS1sb2dpbi1hY3Rpb25zIHsgdGV4dC1hbGlnbjogcmlnaHQgfVxuLyogR2xvYmFsICovXG4ud3JhcHBlciB7IHdpZHRoOiAxMDAlOyBtYXJnaW4tdG9wOiAxMCU7IGJhY2tncm91bmQtY29sb3I6IHdoaXRlfSJdfQ== */"
+module.exports = "    /*\n============================================\n; Title: NodeQuiz\n; Author: Don Cousar\n; Date: 20 October 2019\n; Description: MEAN Stack Node Quiz Project\n;===========================================\n*/\n.left {\n    width: 25%;\n    background-color: white;\n    color: black;\n}\n.right {\n    width: 75%;\n    background-color: white;\n    color: black;\n}\n.menu {\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    z-index: 2;\n    color: white;\n}\n.wrapper {\n    padding: 70px 70px 0;\n    display: block;\n}\n.example-form {\n    min-width: 150px;\n    max-width: 500px;\n    width: 100%;\n  }\n.example-full-width {\n    width: 100%;\n  }\n/* Form Styles */\n.frm-login { width: 50%; margin: 0 auto; }\n.frm-login-panel { border: 1px solid black; }\n.frm-login-header { background-color: red; }\n.frm-login-toolbar { background-color: red; color: white }\n.frm-login-body { display: flex; flex-direction: column; margin-top: 15px; }\n.btn-login { background-color: gray; color: white; }\n.frm-login-actions { text-align: right }\n/* Global */\n.wrapper { width: 100%; margin-top: 10%; background-color: white}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IklBQUk7Ozs7Ozs7Q0FPSDtBQUNEO0lBQ0ksVUFBVTtJQUNWLHVCQUF1QjtJQUN2QixZQUFZO0FBQ2hCO0FBRUE7SUFDSSxVQUFVO0lBQ1YsdUJBQXVCO0lBQ3ZCLFlBQVk7QUFDaEI7QUFFQTtJQUNJLGVBQWU7SUFDZixNQUFNO0lBQ04sT0FBTztJQUNQLFFBQVE7SUFDUixVQUFVO0lBQ1YsWUFBWTtBQUNoQjtBQUVBO0lBQ0ksb0JBQW9CO0lBQ3BCLGNBQWM7QUFDbEI7QUFFQTtJQUNJLGdCQUFnQjtJQUNoQixnQkFBZ0I7SUFDaEIsV0FBVztFQUNiO0FBRUE7SUFDRSxXQUFXO0VBQ2I7QUFFQSxnQkFBZ0I7QUFDbEIsYUFBYSxVQUFVLEVBQUUsY0FBYyxFQUFFO0FBQ3pDLG1CQUFtQix1QkFBdUIsRUFBRTtBQUM1QyxvQkFBb0IscUJBQXFCLEVBQUU7QUFDM0MscUJBQXFCLHFCQUFxQixFQUFFLGFBQWE7QUFDekQsa0JBQWtCLGFBQWEsRUFBRSxzQkFBc0IsRUFBRSxnQkFBZ0IsRUFBRTtBQUMzRSxhQUFhLHNCQUFzQixFQUFFLFlBQVksRUFBRTtBQUNuRCxxQkFBcUIsa0JBQWtCO0FBQ3ZDLFdBQVc7QUFDWCxXQUFXLFdBQVcsRUFBRSxlQUFlLEVBQUUsdUJBQXVCIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIgICAgLypcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG47IFRpdGxlOiBOb2RlUXVpelxuOyBBdXRob3I6IERvbiBDb3VzYXJcbjsgRGF0ZTogMjAgT2N0b2JlciAyMDE5XG47IERlc2NyaXB0aW9uOiBNRUFOIFN0YWNrIE5vZGUgUXVpeiBQcm9qZWN0XG47PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuKi9cbi5sZWZ0IHtcbiAgICB3aWR0aDogMjUlO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIGNvbG9yOiBibGFjaztcbn1cblxuLnJpZ2h0IHtcbiAgICB3aWR0aDogNzUlO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIGNvbG9yOiBibGFjaztcbn1cblxuLm1lbnUge1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDA7XG4gICAgbGVmdDogMDtcbiAgICByaWdodDogMDtcbiAgICB6LWluZGV4OiAyO1xuICAgIGNvbG9yOiB3aGl0ZTtcbn1cblxuLndyYXBwZXIge1xuICAgIHBhZGRpbmc6IDcwcHggNzBweCAwO1xuICAgIGRpc3BsYXk6IGJsb2NrO1xufVxuXG4uZXhhbXBsZS1mb3JtIHtcbiAgICBtaW4td2lkdGg6IDE1MHB4O1xuICAgIG1heC13aWR0aDogNTAwcHg7XG4gICAgd2lkdGg6IDEwMCU7XG4gIH1cbiAgXG4gIC5leGFtcGxlLWZ1bGwtd2lkdGgge1xuICAgIHdpZHRoOiAxMDAlO1xuICB9XG5cbiAgLyogRm9ybSBTdHlsZXMgKi9cbi5mcm0tbG9naW4geyB3aWR0aDogNTAlOyBtYXJnaW46IDAgYXV0bzsgfVxuLmZybS1sb2dpbi1wYW5lbCB7IGJvcmRlcjogMXB4IHNvbGlkIGJsYWNrOyB9XG4uZnJtLWxvZ2luLWhlYWRlciB7IGJhY2tncm91bmQtY29sb3I6IHJlZDsgfVxuLmZybS1sb2dpbi10b29sYmFyIHsgYmFja2dyb3VuZC1jb2xvcjogcmVkOyBjb2xvcjogd2hpdGUgfVxuLmZybS1sb2dpbi1ib2R5IHsgZGlzcGxheTogZmxleDsgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsgbWFyZ2luLXRvcDogMTVweDsgfVxuLmJ0bi1sb2dpbiB7IGJhY2tncm91bmQtY29sb3I6IGdyYXk7IGNvbG9yOiB3aGl0ZTsgfVxuLmZybS1sb2dpbi1hY3Rpb25zIHsgdGV4dC1hbGlnbjogcmlnaHQgfVxuLyogR2xvYmFsICovXG4ud3JhcHBlciB7IHdpZHRoOiAxMDAlOyBtYXJnaW4tdG9wOiAxMCU7IGJhY2tncm91bmQtY29sb3I6IHdoaXRlfSJdfQ== */"
 
 /***/ }),
 
@@ -1022,19 +1022,15 @@ var QuizSummaryDialogComponent = /** @class */ (function () {
     function QuizSummaryDialogComponent(dialogRef, data, questionData, cookieService) {
         this.dialogRef = dialogRef;
         this.cookieService = cookieService;
-        this.quizSummary = data.quizSummary;
+        //this.quizSummary = data.quizSummary;
         this.quizScore = data.quizScore;
-        this.questions = data.questions;
-        this.correctAnswers = data.correctAnswers;
-        this.selectedAnswers = data.selectedAnswers;
-        this.myQuestions = data.myQuestions;
+        //this.questions = data.questions;
         //this.correctAnswers = data.correctAnswers;
         //this.selectedAnswers = data.selectedAnswers;
-        console.log('foo');
-        console.table(this.quizSummary);
+        this.myQuestions = data.myQuestions;
         console.log('Dialog Component Data: ');
         console.table(data);
-        this.employeeId = this.cookieService.get('employeeId');
+        //this.employeeId = this.cookieService.get('employeeId');
         console.log('Dialog Questions');
         console.table(this.questions);
         console.log('Dialog My Questions');
@@ -2027,14 +2023,20 @@ var QuizComponent = /** @class */ (function () {
                 });
             } //end if condition
         } //end for loop
-        console.log('incorrect questions array');
+        /**
+         *
+        console.log('incorrect questions array')
         console.table(this.questionsAnsweredWrong);
-        console.log('correct answers array');
+    
+        console.log('correct answers array')
         console.table(this.correctAnswers);
+    
         console.log('answered answers array');
         console.table(this.selectedAnswers);
+    
         console.log('MyQuestions Array');
         console.table(this.myQuestions);
+         */
         for (var prop in this.quizResults)
             //console.log('Score: ' + x);  //write user's score to console, debug Only
             this.quizResults['score'] = x; //write score to object
@@ -2046,8 +2048,7 @@ var QuizComponent = /** @class */ (function () {
         var summaryData = { 'quizId': this.quizResults['quiz'], 'employeeId': this.quizResults['employeeId'], 'date': moment__WEBPACK_IMPORTED_MODULE_7__().format(), 'score': this.quizResults['score'] };
         console.log('My Quiz Results');
         console.table(this.quizResults); //verify quizResults updated in console
-        //this.displayResults = JSON.stringify(this.quizResults);
-        //onsole.log('Results' + this.displayResults);
+        //console.log('Results' + this.displayResults);
         console.log('My data');
         console.table(data);
         console.log('My questions');
@@ -2331,6 +2332,14 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+/*
+============================================
+; Title: NodeQuiz
+; Author: Don Cousar
+; Date: 20 October 2019
+; Description: MEAN Stack Node Quiz Project
+;===========================================
+*/
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
