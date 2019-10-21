@@ -39,12 +39,7 @@ export class QuizSummaryDialogComponent implements OnInit {
     this.correctAnswers = data.correctAnswers;
     this.selectedAnswers = data.selectedAnswers;
     this.myQuestions = data.myQuestions;
-    //this.correctAnswers = data.correctAnswers;
-    //this.selectedAnswers = data.selectedAnswers;
     
-    console.log('foo');
-    console.table(this.quizSummary);
-
     console.log('Dialog Component Data: ');
     console.table(data);
 
@@ -59,7 +54,6 @@ export class QuizSummaryDialogComponent implements OnInit {
   @Input() public quizResults;
   @Input() public questionsAnsweredWrong;
   
-
   onNoClick(): void {
     this.dialogRef.close();
   }
@@ -67,5 +61,4 @@ export class QuizSummaryDialogComponent implements OnInit {
   ngOnInit() {
     console.log('Dialog Results: ' + this.quizResults);
   }
-
 }

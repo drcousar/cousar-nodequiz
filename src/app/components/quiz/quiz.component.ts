@@ -915,9 +915,6 @@ export class QuizComponent implements OnInit {
 
     var tempQuestion: string;
 
-    
-
-
     //iterate 10 times (1 per question) and count points where user answered correctly
     for(let i = 1; i < 11; i++) {
       
@@ -938,14 +935,11 @@ export class QuizComponent implements OnInit {
         //Write Questions that were incorrectly answered to an array
         tempQuestion = this.quizBank.questions[y].text
         this.questionsAnsweredWrong.push(tempQuestion);
-        
-        
 
         //console.log('tq text: ' + tempQuestion); //Debug Only
         //console.log('Answer Text: ' + answerText); //Debug Only
 
         this.selectedAnswers.push(answerText);
-        
 
       //Loop through correct answers for one that was answered incorrectly and display
         for(let p = 0; p < 4; p++) {
@@ -964,6 +958,9 @@ export class QuizComponent implements OnInit {
 
       } //end if condition
     } //end for loop
+
+    /**
+     *   
     console.log('incorrect questions array')
     console.table(this.questionsAnsweredWrong);
 
@@ -975,7 +972,7 @@ export class QuizComponent implements OnInit {
 
     console.log('MyQuestions Array');
     console.table(this.myQuestions);
-
+     */
 
     for(const prop in this.quizResults)
     //console.log('Score: ' + x);  //write user's score to console, debug Only
@@ -991,9 +988,7 @@ export class QuizComponent implements OnInit {
     console.log('My Quiz Results');
     console.table(this.quizResults); //verify quizResults updated in console
     
-    //this.displayResults = JSON.stringify(this.quizResults);
-
-    //onsole.log('Results' + this.displayResults);
+   //console.log('Results' + this.displayResults);
     console.log('My data');
     console.table(data);
 
@@ -1012,10 +1007,6 @@ export class QuizComponent implements OnInit {
         this.writeCumScore(summaryData, config);
       }
     );
-    
-
-    
-      
   }
 
    //Write to summary collection
