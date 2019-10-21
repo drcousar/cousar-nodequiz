@@ -1,3 +1,11 @@
+/*
+============================================
+; Title: NodeQuiz
+; Author: Don Cousar
+; Date: 20 October 2019
+; Description: MEAN Stack Node Quiz Project
+;===========================================
+*/
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
